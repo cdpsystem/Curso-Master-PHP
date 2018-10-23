@@ -1,0 +1,24 @@
+{# Trabajo con arrays #}
+{{dump(animales)}}
+{{animales[2]}}
+
+
+{# Asociativo #}
+{{dump(aves)}}
+{{aves.tipo ~ ' - ' ~ aves.raza}}
+
+
+{# Condicional #}
+{% if aves.tipo == 'paloma' %}
+	<h1>Cuidado, una paloma voladora</h1>
+{% else %}
+	<h2>No hay palomos a la vista</h2>
+{% endif %}
+
+{% if aves.color starts with 'g' %}
+	<h1>Empieza por G</h1>
+{% endif %}
+
+{% if aves.color ends with 's' %}
+	<h1>Acaba por S</h1>
+{% endif %}

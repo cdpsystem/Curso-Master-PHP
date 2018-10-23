@@ -1,0 +1,27 @@
+Traido por parametro desde el partial -> {{nombre}}
+{# Funciones predefinidas #}
+<h1>Funciones</h1>
+{% set arrNum = [9,11,2,5,7,23,4,13,56,2457,34] %}
+
+<h3>min - {{ min(arrNum) }}</h3>
+<h3>random - {{ random(animales) }}</h3>
+<h3>max - {{ max(arrNum) }}</h3>
+<h3>El dump es otra funcion de estas</h3>
+{{ dump(arrNum) }}
+<h3>range</h3>
+{% for i in range(0, 100,5) %}
+	{{i}}<br/>
+{% endfor %}
+
+<h1>Filtros</h1>
+<p>length - {{animales|length}}</p>
+
+{% set email = '   email@email.com   ' %}
+<p>Email sin trim</p>
+{{dump(email)}}
+<p>Email con trim y upper</p>
+{{dump(email|trim|upper)}}
+
+<h1>Extensiones personalizadas</h1>
+{{ multiplicar(5)|raw }}
+{{ 12|multiplicar|raw }}

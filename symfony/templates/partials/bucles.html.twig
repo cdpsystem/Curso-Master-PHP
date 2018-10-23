@@ -1,0 +1,12 @@
+{% if animales|length > 0 %}
+	<ul>
+		{% for animal in animales %}
+			<li>{{animal}}</li>
+
+		 {% endfor %}
+	</ul>
+{% endif %}
+
+{% for i in 1..animales|length %}
+	{{i}}<br/>
+{% endfor %}

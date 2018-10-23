@@ -1,3 +1,24 @@
-<h1>{{ title }}</h1>
-<h2>Tu nombre es: {{ nombre }}</h2>
-<h3>Tus apellidos son: {{ apellidos }}</h3>
+{% extends 'layouts/master.html.twig' %}
+
+{% block titulo %}Animales{% endblock %}
+
+{% block cabecera %}
+	{{parent()}}
+	<h2>{{title}}</h2>
+{% endblock %}
+
+{% block contenido %}
+	{# Variables #}
+	{{ include('partials/variables.html.twig') }}
+	<hr>
+	{# Arrays #}
+	{{ include('partials/arrays.html.twig') }}
+	<hr>
+	{# Bucles #}
+	{{ include('partials/bucles.html.twig') }}
+	<hr>
+	{# Funciones predefinidas #}
+	{{ include('partials/funciones.html.twig', {'nombre': 'Cristian Diaz Prado'}) }}
+	<hr>
+
+{% endblock %}
